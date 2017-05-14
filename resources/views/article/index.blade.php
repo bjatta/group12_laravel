@@ -13,5 +13,5 @@
     @empty
         <p>Увы</p>
     @endforelse
-    {{ $articles->render() }}
+    <div class="pagination"> {{ $articles->render() }} </div>
 @endsection
