@@ -10,7 +10,7 @@ class ArticleController extends Controller
     {
         $articles = \DB::table('articles')
             ->latest('updated_at')
-            ->paginate(5);
+            ->paginate(7);
         
         return view('article.index', compact('articles'));
     }

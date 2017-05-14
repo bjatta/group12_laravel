@@ -5,12 +5,10 @@
 
     @forelse($articles as $article)
         <section>
-            <h2>
-                <a href="{{ route('article.show', ['slug' => $article->slug]) }}">
-                    {{ $article->title }}
-                </a>
-            </h2>
-            <p>{{ $article->short_description }}</p>
+            <a href="{{ route('article.show', ['slug' => $article->slug]) }}">
+                <h2> {{ $article->title }} </h2>
+                <p>{{ $article->short_description }}</p>
+            </a>
         </section>
     @empty
         <p>Увы</p>
